@@ -45,7 +45,6 @@ OTPs are 6 digits, expire in 5 minutes, and are sent via Nodemailer (Gmail SMTP)
 
 ```bash
 git clone <repo-url>
-cd Varsha_Mysql_Code
 npm install
 pip install flask scikit-learn pandas joblib
 ```
@@ -93,8 +92,6 @@ INSERT INTO students VALUES
 ```
 
 ### 4. Train the ensemble
-
-Place `archive.zip` (Kaggle SQLi dataset) in the project folder, then:
 
 ```bash
 python train_ensemble.py
@@ -152,11 +149,12 @@ Every payload gets blocked and logged. SQLMap reports no injectable parameters.
 ## Project structure
 
 ```
-├── main.js              # Protected app — heuristics + ML + email OTP
+├──main.js              # Protected app — heuristics + ML + email OTP
+├──README.md
 ├── vulnerable.js        # Vulnerable version for before/after demo
 ├── ml_api.py            # Flask API serving the ensemble
 ├── train_ensemble.py    # Trains LR + RF, prints CV scores, saves models
-├── setup_totp.py        # (Legacy) TOTP setup — replaced by email OTP
+├── .gitignore
 ├── .env.example         # Environment variable template
 └── confusion_matrix_ensemble.png
 ```
