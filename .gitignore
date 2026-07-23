@@ -1,0 +1,9 @@
+.env
+archive.zip
+*.pkl
+logs.txt
+node_modules/
+__pycache__/
+sqlmap-master/
+sqlmap-master.zip
+sqli.csv
